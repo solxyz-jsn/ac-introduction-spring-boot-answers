@@ -28,10 +28,10 @@ public class MainController {
 	 * @return 表示ページ
 	 */
 	@RequestMapping("/booklist")
-	public String booklist(Model model) {
+	public String bookList(Model model) {
 		BooksDto [] books = booksservice.getBooks();
 		model.addAttribute("books",Arrays.asList(books));
-		return "books";
+		return "booklist";
 	}
 
 	/**
