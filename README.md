@@ -8,12 +8,12 @@ SOLXYZ Academyコンテンツ「SpringBootによるWebアプリケーション�
 
 ```
 spring-boot-samples/
-├── spring-project-01-mvc/          # はじめてのMVC
-├── spring-project-02-template/     # テンプレートエンジンを使いこなす
-├── spring-project-03-form/         # フォームとバリデーション
-├── spring-project-04-di/           # DI（依存性の注入）
-├── spring-project-05-jpa/          # JPAによるデータベース操作
-└── spring-project-06-api/          # Springを用いたAPIの作成
+├── spring-01-mvc/          # はじめてのMVC
+├── spring-02-template/     # テンプレートエンジンを使いこなす
+├── spring-03-form/         # フォームとバリデーション
+├── spring-04-di/           # DI（依存性の注入）
+├── spring-05-jpa/          # JPAによるデータベース操作
+└── spring-06-api/          # Springを用いたAPIの作成
 ```
 
 ## 使い方
