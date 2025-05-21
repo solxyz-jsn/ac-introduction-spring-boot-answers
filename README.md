@@ -1,4 +1,20 @@
-# Spring BootでRest APIを利用するサンプル
+# SpringBootによるWebアプリケーション構築 サンプルコード
+
+## 概要
+
+SOLXYZ Academyコンテンツ「SpringBootによるWebアプリケーション構築」のサンプルコードです。
+
+このリポジトリは、学習コンテンツの各セクションに対応する形で構成されています。各プロジェクトは、コンテンツの学習順序に沿って番号付けされており、対応するセクションで学ぶ内容を実践できるようになっています。
+
+```
+spring-boot-samples/
+├── spring-project-01-mvc/          # はじめてのMVC
+├── spring-project-02-template/     # テンプレートエンジンを使いこなす
+├── spring-project-03-form/         # フォームとバリデーション
+├── spring-project-04-di/           # DI（依存性の注入）
+├── spring-project-05-jpa/          # JPAによるデータベース操作
+└── spring-project-06-api/          # Springを用いたAPIの作成
+```
 
 ## 使い方
 

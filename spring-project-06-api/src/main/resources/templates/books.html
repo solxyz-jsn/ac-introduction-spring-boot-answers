@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+function apiCall() {
+	$.ajax({
+		url:"http://localhost:8080/call", // 通信先URL
+		type:"GET", //通信の種類
+		dataType:"json", // レスポンスの種類
+		async:false
+		}).done(function (result) {
+			$("#output").append("<li>" + result.id + "</li>");
+			$("#output").append("<li>" + result.title + "</li>");
+			$("#output").append("<li>" + result.author + "</li>");
+			$("#output").append("<li>" + result.publisher + "</li>");
+	});
+}
+$(function (){
+	$("#call-button").on("click",apiCall)
+});
+</script>
+</head>
+<body>
+<p th:text="書籍情報を取得します"></p>
+<button id="call-button">書籍情報取得</button>
+<p th:text="取得結果"></p>
+<ul id="output"></ul>
+</body>
+</html>
