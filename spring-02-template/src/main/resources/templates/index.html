@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample</title>
+</head>
+<body>
+  <h1>Thymeleafの基本的な書き方</h1>
+
+  <h2>値の出力</h2>
+  <p th:text="'Hello World'"></p>
+  <p>インライン表現: [[${'Hello World'}]]</p>
+
+  <h2>コントローラで設定した変数を表示</h2>
+  <p th:text="${message}"></p>
+</body>
+</html>
