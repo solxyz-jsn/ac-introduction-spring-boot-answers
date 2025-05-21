@@ -1,13 +1,13 @@
-package jp.co.solxyz.jsn.sample;
+package jp.co.solxyz.spring.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SampleApplication {
+public class Spring06ApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SampleApplication.class, args);
+		SpringApplication.run(Spring06ApiApplication.class, args);
 	}
 
 }

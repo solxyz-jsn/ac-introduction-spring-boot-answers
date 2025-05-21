@@ -1,9 +1,9 @@
-package jp.co.solxyz.jsn.sample.restcontroller;
+package jp.co.solxyz.spring.api.restcontroller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import jp.co.solxyz.jsn.sample.dto.BooksDto;
+import jp.co.solxyz.spring.api.dto.BooksDto;
 
 /**
  * 書籍一覧を取得するAPI

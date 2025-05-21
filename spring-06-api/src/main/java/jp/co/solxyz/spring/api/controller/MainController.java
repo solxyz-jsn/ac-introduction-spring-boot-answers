@@ -1,4 +1,4 @@
-package jp.co.solxyz.jsn.sample.controller;
+package jp.co.solxyz.spring.api.controller;
 
 import java.util.Arrays;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jp.co.solxyz.jsn.sample.dto.BooksDto;
-import jp.co.solxyz.jsn.sample.service.BooksService;
+import jp.co.solxyz.spring.api.dto.BooksDto;
+import jp.co.solxyz.spring.api.service.BooksService;
 
 /**
  * メイン画面のコントローラークラス

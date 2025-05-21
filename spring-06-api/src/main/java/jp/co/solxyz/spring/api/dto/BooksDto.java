@@ -1,4 +1,4 @@
-package jp.co.solxyz.jsn.sample.dto;
+package jp.co.solxyz.spring.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
