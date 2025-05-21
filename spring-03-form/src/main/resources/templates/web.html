@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<style>
+    span {
+        color: red;
+    }
+</style>
+<body>
+
+<div>
+    <span th:text="${message}"></span>
+</div>
+
+<form th:action="@{/webform}" method="POST" th:object="${webForm}">
+    <p>
+        <input type="text" name="name" th:value="*{name}" placeholder="氏名" /><br />
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    </p>
+    <p>
+        <input type="number" name="age" th:value="*{age}" placeholder="年齢" /><br />
+        <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+    </p>
+    <p>
+        <input type="text" name="postal" th:value="*{postal}" placeholder="郵便番号" /><br />
+        <span th:if="${#fields.hasErrors('postal')}" th:errors="*{postal}"></span>
+    </p>
+    <input type="submit" value="送信" />
+</form>
+
+</body>
+</html>
