@@ -5,7 +5,11 @@ import jp.co.solxyz.spring.jpa.service.EmployeeService;
 import lombok.Data;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,6 +26,7 @@ public class EmployeeController {
 
     /**
      * 全従業員一覧を表示
+     *
      * @param model モデル
      * @return 従業員一覧ビュー
      */
@@ -34,6 +39,7 @@ public class EmployeeController {
 
     /**
      * 65歳以上の従業員一覧を表示
+     *
      * @param model モデル
      * @return 従業員一覧ビュー
      */
@@ -46,6 +52,7 @@ public class EmployeeController {
 
     /**
      * 65歳未満の従業員一覧を表示
+     *
      * @param model モデル
      * @return 従業員一覧ビュー
      */
@@ -58,7 +65,8 @@ public class EmployeeController {
 
     /**
      * 従業員詳細を表示
-     * @param id 従業員ID
+     *
+     * @param id    従業員ID
      * @param model モデル
      * @return 従業員詳細ビュー
      */
@@ -76,6 +84,7 @@ public class EmployeeController {
 
     /**
      * 新規従業員追加フォームを表示
+     *
      * @param model モデル
      * @return 従業員フォームビュー
      */
@@ -88,7 +97,8 @@ public class EmployeeController {
 
     /**
      * 従業員編集フォームを表示
-     * @param id 従業員ID
+     *
+     * @param id    従業員ID
      * @param model モデル
      * @return 従業員フォームビュー
      */
@@ -106,6 +116,7 @@ public class EmployeeController {
 
     /**
      * 従業員情報を保存
+     *
      * @param employee 従業員情報
      * @return リダイレクト先
      */
@@ -117,6 +128,7 @@ public class EmployeeController {
 
     /**
      * 従業員情報を削除
+     *
      * @param id 従業員ID
      * @return リダイレクト先
      */

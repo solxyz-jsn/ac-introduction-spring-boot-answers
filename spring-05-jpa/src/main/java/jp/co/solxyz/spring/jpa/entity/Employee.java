@@ -9,25 +9,33 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="t_emp")
+@Table(name = "t_emp")
 @Data
-public class Employee{
-    /**従業員ID*/
+public class Employee {
+    /**
+     * 従業員ID
+     */
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long empId;
 
-    /**名前*/
-    @Column(name="name")
+    /**
+     * 名前
+     */
+    @Column(name = "name")
     String empName;
 
-    /**役職*/
-    @Column(name="position")
+    /**
+     * 役職
+     */
+    @Column(name = "position")
     String empPosition;
 
-    /**年齢*/
-    @Column(name="age")
+    /**
+     * 年齢
+     */
+    @Column(name = "age")
     int empAge;
 
 }

@@ -1,56 +1,56 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>従業員一覧</title>
 </head>
 <body>
-    <header>
-        <h1>従業員管理システム</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a th:href="@{/employees}">全従業員一覧</a></li>
-            <li><a th:href="@{/employees/over-age}">65歳以上の従業員</a></li>
-            <li><a th:href="@{/employees/under-age}">65歳未満の従業員</a></li>
-            <li><a th:href="@{/employees/new}">新規従業員登録</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>従業員一覧</h2>
+<header>
+    <h1>従業員管理システム</h1>
+</header>
+<nav>
+    <ul>
+        <li><a th:href="@{/employees}">全従業員一覧</a></li>
+        <li><a th:href="@{/employees/over-age}">65歳以上の従業員</a></li>
+        <li><a th:href="@{/employees/under-age}">65歳未満の従業員</a></li>
+        <li><a th:href="@{/employees/new}">新規従業員登録</a></li>
+    </ul>
+</nav>
+<main>
+    <h2>従業員一覧</h2>
 
-        <div th:if="${#lists.isEmpty(employees)}">
-            <p>表示する従業員情報がありません。</p>
-        </div>
-        <div th:unless="${#lists.isEmpty(employees)}">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>名前</th>
-                        <th>役職</th>
-                        <th>年齢</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="employee : ${employees}">
-                        <td th:text="${employee.empId}"></td>
-                        <td th:text="${employee.empName}"></td>
-                        <td th:text="${employee.empPosition}"></td>
-                        <td th:text="${employee.empAge}"></td>
-                        <td>
-                            <a th:href="@{/employees/{id}(id=${employee.empId})}">詳細</a>
-                            <a th:href="@{/employees/{id}/edit(id=${employee.empId})}">編集</a>
-                            <a th:href="@{/employees/{id}/delete(id=${employee.empId})}">削除</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div>
-            <a th:href="@{/employees/new}">新規従業員登録</a>
-        </div>
-    </main>
+    <div th:if="${#lists.isEmpty(employees)}">
+        <p>表示する従業員情報がありません。</p>
+    </div>
+    <div th:unless="${#lists.isEmpty(employees)}">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>名前</th>
+                <th>役職</th>
+                <th>年齢</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.empId}"></td>
+                <td th:text="${employee.empName}"></td>
+                <td th:text="${employee.empPosition}"></td>
+                <td th:text="${employee.empAge}"></td>
+                <td>
+                    <a th:href="@{/employees/{id}(id=${employee.empId})}">詳細</a>
+                    <a th:href="@{/employees/{id}/edit(id=${employee.empId})}">編集</a>
+                    <a th:href="@{/employees/{id}/delete(id=${employee.empId})}">削除</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <a th:href="@{/employees/new}">新規従業員登録</a>
+    </div>
+</main>
 </body>
 </html>
