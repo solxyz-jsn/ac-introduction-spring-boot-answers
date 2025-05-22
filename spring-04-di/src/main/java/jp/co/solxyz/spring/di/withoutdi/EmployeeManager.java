@@ -30,6 +30,7 @@ public class EmployeeManager {
 
     /**
      * 従業員を取得する
+     *
      * @param id ID
      * @return 従業員
      */
@@ -39,6 +40,7 @@ public class EmployeeManager {
 
     /**
      * 従業員を削除する
+     *
      * @param id ID
      */
     public void removeEmployee(String id) {

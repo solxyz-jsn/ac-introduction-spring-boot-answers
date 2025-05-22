@@ -1,9 +1,9 @@
 package jp.co.solxyz.spring.di.withdi;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import org.springframework.stereotype.Component;
 
 @Component //このクラスをDIコンテナに登録するために、@Componentを付与する
 public class EmployeeManager {
@@ -30,6 +30,7 @@ public class EmployeeManager {
 
     /**
      * 従業員を取得する
+     *
      * @param id ID
      * @return 従業員
      */
@@ -39,6 +40,7 @@ public class EmployeeManager {
 
     /**
      * 従業員を削除する
+     *
      * @param id ID
      */
     public void removeEmployee(String id) {
