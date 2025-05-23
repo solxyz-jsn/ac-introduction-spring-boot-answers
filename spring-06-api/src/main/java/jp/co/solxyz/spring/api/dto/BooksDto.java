@@ -1,26 +1,33 @@
 package jp.co.solxyz.spring.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.Data;
 
 /**
  * 書籍情報Dto
  */
-@JsonIgnoreProperties(ignoreUnknown=true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class BooksDto {
 
-	/** 書籍ID */
-	String id;
+    /**
+     * 書籍ID
+     */
+    String id;
 
-	/** 書籍タイトル */
-	String title;
+    /**
+     * 書籍タイトル
+     */
+    String title;
 
-	/** 出版社名 */
-	String publisher;
+    /**
+     * 出版社名
+     */
+    String publisher;
 
-	/** 著者ID */
-	String author;
+    /**
+     * 著者ID
+     */
+    String author;
 
 }
