@@ -2,7 +2,6 @@ package jp.co.solxyz.spring.api.controller;
 
 import jp.co.solxyz.spring.api.dto.BooksDto;
 import jp.co.solxyz.spring.api.service.BooksService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,10 +15,13 @@ import java.util.Arrays;
 public class MainController {
 
     /**
-     * 書籍情報を管理するサービス
+     * 書籍情報を取得するサービス
      */
-    @Autowired
-    BooksService booksservice;
+    private final BooksService booksService;
+
+    public MainController(BooksService booksService) {
+        this.booksService = booksService;
+    }
 
     /**
      * 外部API利用結果画面
@@ -29,7 +31,7 @@ public class MainController {
      */
     @RequestMapping("/booklist")
     public String bookList(Model model) {
-        BooksDto[] books = booksservice.getBooks();
+        BooksDto[] books = booksService.getBooks();
         model.addAttribute("books", Arrays.asList(books));
         return "booklist";
     }

@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>書籍一覧</title>
 </head>
+<style>
+    table {
+        border: 1px solid black;
+    }
+
+    th, td {
+        border: 1px solid black;
+    }
+</style>
 <body>
 <p th:text="書籍一覧"></p>
-<table th:each="book : ${books}" border="1">
+<table th:each="book : ${books}">
     <tr>
         <th>ID</th>
         <th>タイトル</th>

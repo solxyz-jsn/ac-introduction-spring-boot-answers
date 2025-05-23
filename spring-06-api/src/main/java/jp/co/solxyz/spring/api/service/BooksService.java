@@ -6,6 +6,9 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 書籍情報を取得するサービスクラス
+ */
 @Service
 public class BooksService {
 
