@@ -6,6 +6,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
+/**
+ * 入力フォームのデータを保持するDTOクラス。
+ */
 @Data
 public class WebForm {
     /**
