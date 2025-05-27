@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>従業員フォーム</title>
+</head>
+<body>
+<header>
+    <h1>従業員管理システム</h1>
+</header>
+<nav>
+    <ul>
+        <li><a th:href="@{/employees}">全従業員一覧</a></li>
+        <li><a th:href="@{/employees/over-age}">65歳以上の従業員</a></li>
+        <li><a th:href="@{/employees/under-age}">65歳未満の従業員</a></li>
+        <li><a th:href="@{/employees/new}">新規従業員登録</a></li>
+    </ul>
+</nav>
+<main>
+    <h2>従業員フォーム</h2>
+
+    <form th:action="@{/employees}" th:object="${employee}" method="post">
+        <input type="hidden" th:field="*{empId}" th:if="${!isNew}"/>
+
+        <div>
+            <label for="empName">名前</label>
+            <input type="text" th:field="*{empName}" id="empName" required/>
+        </div>
+
+        <div>
+            <label for="empPosition">役職</label>
+            <input type="text" th:field="*{empPosition}" id="empPosition" required/>
+        </div>
+
+        <div>
+            <label for="empAge">年齢</label>
+            <input type="number" th:field="*{empAge}" id="empAge" min="18" max="100" required/>
+        </div>
+
+        <div>
+            <button type="submit">保存</button>
+            <a th:href="@{/employees}">キャンセル</a>
+        </div>
+    </form>
+</main>
+</body>
+</html>
