@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 従業員管理クラス
+ * 従業員を管理するクラス
+ * 従業員の追加、取得、削除、一覧表示を行う機能を提供する。
  */
 public class EmployeeManager {
     /**
@@ -20,7 +21,7 @@ public class EmployeeManager {
     }
 
     /**
-     * 従業員を追加する
+     * 従業員を追加するメソッド
      *
      * @param employee 従業員
      */
@@ -29,7 +30,7 @@ public class EmployeeManager {
     }
 
     /**
-     * 従業員を取得する
+     * 従業員を取得するメソッド
      *
      * @param id ID
      * @return 従業員
@@ -39,7 +40,7 @@ public class EmployeeManager {
     }
 
     /**
-     * 従業員を削除する
+     * 従業員を削除するメソッド
      *
      * @param id ID
      */
@@ -48,7 +49,7 @@ public class EmployeeManager {
     }
 
     /**
-     * 従業員一覧を表示する
+     * 従業員一覧を表示するメソッド
      */
     public void listEmployees() {
         for (Employee employee : this.employees.values()) {

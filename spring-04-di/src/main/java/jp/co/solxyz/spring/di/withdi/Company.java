@@ -21,7 +21,8 @@ public class Company {
     }
 
     /**
-     * 実行
+     * 会社の動作を実行するメソッド。
+     * 従業員オブジェクトを作成し、従業員管理クラスに追加した後、登録されている従業員一覧を表示する。
      */
     public void run() {
         Employee emp1 = new Employee("001", "ソルク太郎");
