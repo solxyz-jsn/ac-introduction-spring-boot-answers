@@ -2,7 +2,7 @@ package jp.co.solxyz.spring.jpa.controller;
 
 import jp.co.solxyz.spring.jpa.entity.Employee;
 import jp.co.solxyz.spring.jpa.service.EmployeeService;
-import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ import java.util.Optional;
  */
 @Controller
 @RequestMapping("/employees")
-@Data
+@RequiredArgsConstructor
 public class EmployeeController {
 
     private final EmployeeService employeeService;
