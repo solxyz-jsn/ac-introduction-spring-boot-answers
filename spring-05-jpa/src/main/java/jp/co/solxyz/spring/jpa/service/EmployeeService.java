@@ -2,14 +2,14 @@ package jp.co.solxyz.spring.jpa.service;
 
 import jp.co.solxyz.spring.jpa.entity.Employee;
 import jp.co.solxyz.spring.jpa.repository.EmployeeRepository;
-import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@Data
+@RequiredArgsConstructor
 public class EmployeeService {
 
     private final EmployeeRepository empRepository;
